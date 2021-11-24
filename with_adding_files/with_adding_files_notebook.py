@@ -1,10 +1,10 @@
 # Databricks notebook source
-spark.sparkContext.addPyFile("../import_location/dependency_file.py")
+import os
+import os, sys
+spark.sparkContext.addPyFile(f"{os.getcwd()}/../import_location/dependency_file.py")
 
 # COMMAND ----------
 
-import os
-import os, sys
 sys.path.append("../import_location")
 from dependency_file import JobClass
 
